@@ -32,6 +32,11 @@ User.findOne({ where: { email: req.body.email }
 }).then((result) => {;
   console.log(result)
   res.json(result)
+                     app.post('/date', (res, req) => {
+User.update({ where: { date: req.body.date } 
+}).then((result) => {;
+  console.log(result)
+  res.json(result)
 
 
 
