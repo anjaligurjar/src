@@ -24,6 +24,12 @@ profilepic:{
 
 
 })
+
+ 
+// Query to find and show all the posts
+Post.find()
+    .then(p => console.log(p))
+    .catch(error => console.log(error))
  module.exports= mongoose.model("admin",adminSchema)
 
 
