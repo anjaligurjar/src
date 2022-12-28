@@ -2,7 +2,7 @@
 const postuser=async (res,req)=>{
     const postdata= req.body 
     if(postdata>1){
-        const data=await User.bulkcreate(postdata)
+        const data=await User.insert(postdata)
         console.log("All users:", JSON.stringify(postuser));
     }
     else{
