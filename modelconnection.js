@@ -1,7 +1,7 @@
 const mongoose= require('mongoose')
 mongoose.connect('mongodb://127.0.0.1:27017/test');
 const Schema= mongoose.Schema
-const adminUserSchema = Schema({
+const UserSchema = Schema({
 
 id:{
 type:number
@@ -19,18 +19,18 @@ role:{
 },
 profilepic:{
 
-}
+},
+   date:{
+      type:Date
 
 
 
 })
 
- 
-// Query to find and show all the posts
 Post.find()
     .then(p => console.log(p))
     .catch(error => console.log(error))
- module.exports= mongoose.model("admin",adminSchema)
+ module.exports= mongoose.model("user",userSchema)
 
 
 
